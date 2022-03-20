@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+body {
+    background: #2F3A8F;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    width: 75%;
+    height: 75vh;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0px 1px 10px black;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #6867AC;
+}
+
+#result {
+    width: 50%;
+    height: 50vh;
+    box-shadow: 0px 1px 10px black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5em;
+    margin-top: 10px;
+    background-color: #FDEBF7;
+    cursor: default;
+}
+
+#pick {
+    /* border: 1px solid black; */
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pick {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    background-color: #2FA4FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.pick:hover {
+    background-color: #74baf0;
+}
+
+.skor {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    color: white;
+    cursor: default;
+}
+
+#load {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px black dotted;
+    animation: load 1.5s forwards;
+    display: none;
+}
+
+@keyframes load {
+    to {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+
+#loby {
+    width: 30%;
+    height: 50vh;
+    border: 1px solid rgb(35, 37, 39);
+    border-radius: 20px;
+    box-shadow: 0px 1px 3px black;
+    background-color: #74baf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#loby h1 {
+    font-size: 60px;
+    cursor: default;
+}
+
+#loby h3 {
+    font-size: 40px;
+    position: relative;
+    top: -30px;
+    cursor: default;
+}
+
+#loby input {
+    width: 70%;
+    height: 40px;
+    border: 1px solid black;
+    background: rgb(218, 204, 204);
+    outline: none;
+    text-align: center;
+    position: relative;
+    top: -35px;
+    font-size: 1.5em;
+}
+
+#loby button {
+    width: 80px;
+    height: 40px;
+    outline: none;
+    border: 1px solid black;
+    color: white;
+    position: relative;
+    background-color: #0E3EDA;
+    top: -30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#loby button:hover {
+    background-color: #344c99;
+}
+
+#loading {
+    opacity: 1;
+    cursor: default;
+    animation: load .5s alternate-reverse infinite;
+}
+
+@keyframes load {
+    to {
+        opacity: 0;
+    }
+}
+
+.in {
+    animation: in 1s forwards;
+}
+
+@keyframes in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* responsive */
+
+@media only screen and (min-width: 600px){
+    #loby{
+        width: 50%;
+    }
+
+    #main{
+        width: 75%;
+        height: 75vh;
+    }
+
+    #pick{
+        width: 70%;
+    }
+
+    #pick .pick{
+        width: 80px;
+        height: 80px;
+    }
+
+    .skor{
+        width: 20%;
+        font-size: 15px;
+    }
+
+    #result{
+        width: 50%;
+        height: 50vh;
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #loby{
+        width: 75%;
+        height: 40vh;
+    }
+
+    #loby h1{
+        font-size: 40px;
+    }
+
+    #loby h3{
+        font-size: 30px;
+    }
+
+    #loby input{
+        width: 60%;
+        height: 30px;
+        font-size: 1em;
+    }
+
+    #loby button{
+        width: 60px;
+        height: 30px;
+    }
+
+    #main{
+        width: 80%;
+        height: 70vh;
+    }
+
+    #pick{
+        width: 70%;
+    }
+
+    #pick .pick{
+        width: 50px;
+        height: 50px;
+    }
+
+    .skor{
+        font-size: .9em;
+        width: 70%;
+    }
+
+    #result{
+        width: 70%;
+        height: 50vh;
+        font-size: .9em;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    #loby{
+        width: 30%;
+        height: 50vh;
+    }
+
+    #main{
+        width: 75%;
+        height: 75vh;
+    }
+
+    #pick{
+        width: 50%;
+        height: 50vh;
+    }
+
+    #pick .pick{
+        width: 100px;
+        height: 100px;
+    }
+
+    .skor{
+        width: 20%;
+        font-size: 20px;
+    }
+
+    #result{
+        width: 50%;
+        height: 50vh;
+        font-size: 1.5em;
+    }
+}
